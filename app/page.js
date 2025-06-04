@@ -5,7 +5,9 @@ import styles from "./page.module.css";
 export default function Home() {
 
 const sendData = () => {
-  dataLayer.push({"event": "demoButton"});
+  window.dataLayer.push({
+    event: "demo_request"
+  });
   console.log("pushed!")
 }
   
