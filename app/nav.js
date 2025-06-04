@@ -5,6 +5,7 @@ export default function Nav() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link className="navbar-brand" href="/">SHOP TULO</Link>
+        <Link className="navbar-brand" href="/stores">Find a Store</Link>
       </div>
     </nav>
   );

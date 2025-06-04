@@ -8,6 +8,22 @@
     margin-bottom: 4vh;
 }
 
+.card-card {
+    width: 80vw;
+    margin-top: 15vh;
+}
+
+a {
+    text-decoration: none;
+}
+.stores-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
 @media screen and (max-width: 710px) {
     .cards-container {
         grid-template-columns: auto;
