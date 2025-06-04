@@ -3,9 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  background: var(--background);
 }
 
-.h1 {
-  margin: 50px;
-}
