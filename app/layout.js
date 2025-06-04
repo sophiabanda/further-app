@@ -1,6 +1,7 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./nav";
+import { gtmScript } from "./gtm";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -20,7 +21,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: gtmScript }} />
+      </head>
       <body>
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K673G6TM"
+            height="0" 
+            width="0" 
+            style="display:none;visibility:hidden"></iframe>
+        </noscript>
         <Nav></Nav>
         {children}
       </body>
