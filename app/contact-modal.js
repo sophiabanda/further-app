@@ -14,9 +14,11 @@ export default function ContactModal() {
     return (
         <div className="modal-container">
             <div className="modal-content">
-                <button id="modal-button" className="btn btn-secondary">
-                    X
-                </button>
+                <div className="button-div">
+                    <button id="modal-button" className="btn btn-secondary">
+                        X
+                    </button>
+                </div>
                 <h3>
                     Add your details here and you will receive an appointment
                     within 48 hours.
