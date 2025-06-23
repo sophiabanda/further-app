@@ -14,6 +14,9 @@ export default function ContactModal() {
     return (
         <div className="modal-container">
             <div className="modal-content">
+                <button id="modal-button" className="btn btn-secondary">
+                    X
+                </button>
                 <h3>
                     Add your details here and you will receive an appointment
                     within 48 hours.
@@ -21,7 +24,7 @@ export default function ContactModal() {
                 <form action="">
                     <input
                         type="email"
-                        class="form-control"
+                        className="form-control"
                         id="floatingInput"
                         placeholder="name@example.com"
                     ></input>

@@ -25,6 +25,9 @@
     height: 65%;
     padding: 10vh;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgb(251, 102, 48), -1em 0 0.4em rgb(156, 243, 156);
+    border: 5px solid black;
 }
 
 form {
