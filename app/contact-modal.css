@@ -16,17 +16,26 @@
 .modal-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    align-content: center;
     z-index: 1001;
     background-color: white;
     box-shadow: none;
-    width: 55%;
-    height: 90%;
+    width: 45%;
+    height: 65%;
+    padding: 10vh;
+    text-align: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+input,
+label {
+    margin: 2vh;
 }

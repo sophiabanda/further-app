@@ -1,25 +1,38 @@
 import './contact-modal.css';
 
 export default function ContactModal() {
+    function availableScheduleDates(date, days) {
+        const todaysDate = new Date(date);
+        todaysDate.setDate(date.getDate() + days);
+        return todaysDate;
+    }
+    const currentDate = new Date();
+    const weeksInDays = 28;
+
+    const availableTimes = availableScheduleDates(currentDate, weeksInDays);
+
     return (
         <div className="modal-container">
             <div className="modal-content">
                 <h3>
-                    Submit your information here in order to schedule your
-                    fitting
+                    Add your details here and you will receive an appointment
+                    within 48 hours.
                 </h3>
                 <form action="">
-                    <input type="text" />
-                    <label htmlFor="">Email</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                    ></input>
                     <input
                         type="datetime-local"
                         id="meeting-time"
                         name="meeting-time"
-                        value="2018-06-12T19:30"
-                        min="2018-06-07T00:00"
-                        max="2018-06-14T00:00"
+                        min={currentDate}
+                        max={availableTimes.toDateString()}
                     />
-                    <label htmlFor="">Preferred Date & Time</label>
+                    <button className="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
