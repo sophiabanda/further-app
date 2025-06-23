@@ -1,6 +1,6 @@
 import './contact-modal.css';
 
-export default function ContactModal() {
+export default function ContactModal({ onClose }) {
     function availableScheduleDates(date, days) {
         const todaysDate = new Date(date);
         todaysDate.setDate(date.getDate() + days);
@@ -15,13 +15,17 @@ export default function ContactModal() {
         <div className="modal-container">
             <div className="modal-content">
                 <div className="button-div">
-                    <button id="modal-button" className="btn btn-secondary">
+                    <button
+                        onClick={onClose}
+                        id="modal-button"
+                        className="btn btn-secondary"
+                    >
                         X
                     </button>
                 </div>
                 <h3>
-                    Add your details here and you will receive an appointment
-                    within 48 hours.
+                    Add your date and time request here to be contacted for an
+                    appointment.
                 </h3>
                 <form action="">
                     <input
